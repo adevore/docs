@@ -9,7 +9,7 @@ Material Frontend is the lightweight alternative to the django admin
 allows to build big modular websites.
 
 - Lightweight module extension of django application config
-- Ready to use theme build with ``MaterialzeCSS``
+- Ready to use theme build with ``MaterializeCSS``
 - Autocollected site navigation menu
 - Fast and smooth navigation with Turbolinks
 - CRUD scatffolding build with django class based views
@@ -83,7 +83,7 @@ The menu.html sample
         </ul>
 
 Next, you need to add `myapp.apps.MyAppConfig` to the `INSTALLED_APPS`
-setting and run `./manange.py migrate` to get module entry created.
+setting and run `./manage.py migrate` to get module entry created.
 
 
 Examples

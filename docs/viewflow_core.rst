@@ -122,14 +122,14 @@ URLs
 ====
 
 `Flow.urls` contains all views and task actions URLs and can be used
-directly in the URL config. `viewflow.flow.viewset.FlowViewset` and
+directly in the URL config. `viewflow.flow.viewset.FlowViewSet` and
 `viewflow.rest.viewt.FlowViewset` builds a URL config that contains
 list views (ex: inbox) besides. If you use the viewflow frontend, no
 specific URL configuration is required.
 
 .. code-block:: python
 
-    ulrpatterns = [
+    urlpatterns = [
         url(r'^sampleflow/', SampleFlow.instance.urls)
     ]
 
@@ -139,7 +139,7 @@ or, with build-in list views:
 
     from viewflow.flow.viewset import FlowViewSet
     
-    ulrpatterns = [
+    urlpatterns = [
         url(r'^sampleflow/', FlowViewSet(SampleFlow).urls)
     ]
 
@@ -156,11 +156,11 @@ or, in the case of viewflow frontend
 Error handling
 ==============
 
-Viewflow provides two different strategies for an :doc:`error handling
+Viewflow provides two different strategies for :doc:`error handling
 <viewflow_core_exceptions>`. For view tasks, any exception in
 subsequent task activation would rollback the whole transaction, and
 view task will be available for end user again, for the case if they
-can change input data to pass.For the jobs, jobs result committed as
+can change input data to pass. For the jobs, jobs result committed as
 soon as job ends. If an error happens in a subsequent task, the
 subsequent task will be saved in error state and available for an
 administrator for further processing in django admin. Error handling
